@@ -1,3 +1,10 @@
+nav{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    min-height:47px;
+}
 nav > ul > li{
     display:inline-block;
     margin-right:17px;
