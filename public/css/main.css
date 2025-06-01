@@ -58,6 +58,7 @@ header{
     display:flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap:wrap;
 }
 .destForm > fieldset{
     border: none;
