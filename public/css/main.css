@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    --max-width:1440px;
+    --midle-color:#29D9D5;
+    --background-color:#222222;
+}
+@font-face {
+  font-family: "Nunito";
+  src:
+    local("Nunito"),
+    url("/Nunito/Nunito-VariableFont_wght.ttf") format("opentype");
+}
+body{
+    width:100%;
+    max-width:var(--max-width);
+    margin-left: auto;
+    margin-right:auto;
+}
+main{
+    width:100%;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    justify-items: center;
+    background-image:linear-gradient(#29d9d657,#29d9d657), url("../../img/mountain.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+    flex-direction: column;
+}
+.heroContent{
+    width:100%;
+    max-width:721px;
+    min-height:453px;
+    display:grid;
+    color:white;
+    margin-bottom:70px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+.heroContent > h1{
+    font-size: 64px;
+}
+.destForm{
+    width:100%;
+    max-width:721px;
+    min-height:143px;
+    border-radius:27px;
+    background-color: #111111;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.destForm > fieldset{
+    border: none;
+}
+.destForm > fieldset > input{
+    width:131px;
+    height: 35px;
+    border-radius: 17px;
+    border: #29D9D5 2px solid;
+    background-color: #111111;
+    color:#29D9D5
+}
+article{
+    width:100%;
+
+}

@@ -2,10 +2,40 @@ nav{
     display:grid;
     justify-content: center;
     align-items: center;
+    justify-items:center;
+    grid-template-columns: repeat(auto-fill,minmax(100px,400px));
     width:100%;
     min-height:47px;
+    max-width:var(--max-width);
+    color:white;
+    font-family: Nunito;
+    background-color:var(--background-color);
+
 }
 nav > ul > li{
     display:inline-block;
     margin-right:17px;
+}
+nav > ul > li > a{
+    color:white;
+    text-decoration: none;
+
+}
+.logo{
+    font-family: Nunito;
+    font-size: 42px;
+    width:130px;
+}
+button{
+    width:120px;
+    height:50px;
+    color:#29D9D5;
+
+    background-color: transparent;
+    border-radius: 27px;
+    border:2px solid #29D9D5;
+}
+button > a{
+    color:var(--middle-color);
+    text-decoration: none;
 }
