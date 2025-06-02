@@ -12,6 +12,9 @@ nav{
     background-color:var(--background-color);
 
 }
+.menu{
+    display:none;
+}
 nav > ul > li{
     display:inline-block;
     margin-right:17px;
@@ -38,4 +41,64 @@ button{
 button > a{
     color:var(--middle-color);
     text-decoration: none;
+}
+@media(max-width:1207px){
+    nav{
+         grid-template-columns: repeat(auto-fill,minmax(100px,300px));
+    }   
+}
+@media(max-width:901px){
+    nav{
+         grid-template-columns: repeat(auto-fill,minmax(100px,200px));
+    }
+    .menu{
+        display:grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .menu > span{
+        display: block;
+        width:70px;
+        height:3px;
+        background-color:#29D9D5;
+        border-radius:7px;
+    }
+    .menu > span:nth-child(2){
+        width:57px;
+        margin-top: 15px;
+        margin-bottom:15px;
+    }
+    nav > ul{
+        display:none;
+    }
+}
+@media(max-width:700px){
+    nav{
+         grid-template-columns: repeat(auto-fill,minmax(100px,170px));
+    }
+}
+@media(max-width:500px){
+    nav{
+         grid-template-columns: repeat(auto-fill,minmax(100px,100px));
+    }
+}
+
+.openMenush{
+    display:flex;
+    position: fixed;
+    background-color: #222222;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all ease 1s;
+    width:100%;
+    top:0;
+    height:7px;
+}
+.openMenush > a{
+    margin-top:3%;
+    margin-bottom:3%;
+    font-size:0px;
+    transition:all ease 1s;
 }
