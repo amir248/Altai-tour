@@ -101,4 +101,12 @@ button > a{
     margin-bottom:3%;
     font-size:0px;
     transition:all ease 1s;
+    text-decoration:none;
+    color:white;
+    text-shadow: #29D9D5 2px 2px;
+}
+.openMenush > a:hover{
+    color:#29D9D5;
+    text-shadow:black 2px 2px;
+    transition: all ease 1s;
 }
