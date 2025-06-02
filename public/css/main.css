@@ -31,8 +31,11 @@ header{
     justify-items: center;
 
 }
-.heroContent > h1{
+.heroContent > strong{
     font-size: 64px;
+}
+.heroContent > h1{
+    font-size:22px;
 }
 .destForm{
     width:100%;
