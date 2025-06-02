@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    --max-width:1440px;
+    --midle-color:#29D9D5;
+    --background-color:#222222;
+}
+@font-face {
+  font-family: "Nunito";
+  src:
+    local("Nunito"),
+    url("/Nunito/Nunito-VariableFont_wght.ttf") format("opentype");
+}
