@@ -116,6 +116,11 @@ body > main > article > .choose{
     background-color: #222222;
     border-radius:17px;
 }
+.tourProgram > strong{
+    width:100%;
+    min-width:100%;
+    color:#29D9D5;
+}
 .tourProgram > h2{
     width:100%;
     min-width:100%;
@@ -141,13 +146,18 @@ body > main > article > .choose{
      margin-top: 17px;
     width:100%;
     max-width:1034px;
-    min-height:915px;
+    /* min-height:915px; */
     display:flex;
     justify-content:center;
     align-items: center;
     justify-items: center;
     flex-wrap:wrap;
     grid-gap:20px;
+}
+.tourCost > strong{
+    width:100%;
+    max-width:100%;
+    color:#29D9D5;
 }
 .tourCost > h2{
     width:100%;
@@ -174,4 +184,31 @@ body > main > article > .choose{
 
 article > p{
     margin:3%;
+}
+
+.startYourAdventure{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    color:white;
+    width:100%;
+    max-width:1440px;
+    height:510px;
+    background: url("../../public/img/adventure.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.startYourAdventure > div{
+    width:100%;
+    max-width:494px;
+    height: 220px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.startYourAdventure > div > h3{
+    font-size:33px;
 }

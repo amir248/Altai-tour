@@ -1,17 +1,47 @@
 footer{
     background-color: #111111;
     color:white;
-}
-footer > div{
-    width: 100%;
-    max-width:1019px;
-    min-height:287;
     display:flex;
     justify-content: center;
     align-items: center;
     justify-items: center;
+    width:100%;
+    max-width:1440px;
+    flex-direction: column;
+}
+footer > div{
+    width: 100%;
+    max-width:1019px;
+    min-height:287px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
     flex-wrap:wrap;
     
+}
+footer > div > ul > li:nth-child(1){
+    list-style-type:none;
+    counter-reset: my-counter;
+    /* list-style-image:url("../../public/img/icon/place.svg"); */
+}
+footer > div:nth-child(2) > ul > li{
+    counter-increment:my-counter;
+}
+footer > div:nth-child(2) > ul > li::before{
+   content: counter(my-counter); /* Вывести счетчик перед элементом */
+    display: inline-block; /*  Сделать блочным */
+    width: 20px; /*  Ширина */
+    height: 20px; /* Высота */
+    background: url("image1.png") no-repeat; /*  Задать фон для первого li */
+}
+footer > div:nth-child(3) > ul > li::before{
+    background: url("image2.png") no-repeat; /*  Задать фон для второго li */
+}
+footer > div > ul > li > a{
+    text-decoration: none;
+    color:white;
+    font-size:20px;
 }
 footer > section{
     width:100%;
