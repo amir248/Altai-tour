@@ -18,6 +18,7 @@ header{
     background-size: cover;
     min-height:100vh;
     flex-direction: column;
+    font-family: Nunito;
 }
 .heroContent{
     width:100%;
@@ -61,5 +62,116 @@ header{
 }
 article{
     width:100%;
+    background-color: #111111;
+    color:white;
+    font-family: Nunito;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+article > div > div > strong{
+    color:#29D9D5;
+}
+body > main > article > .choose{
+    margin-top:17px;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap:wrap;
+            width: 100%;
+            max-width: 1045px;
+        }
+        body > main > article > div > div{
+            width:100%;
+            max-width:500px;
+        }
+        body > main > article > div > picture > img{
+            width:100%;
+            max-width:400px;
+            min-height:255px;
+            object-fit: cover;
+        }
 
+.tourProgram{
+    margin-top: 17px;
+    width:100%;
+    max-width:1034px;
+    min-height:915px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    justify-items: center;
+    flex-wrap:wrap;
+    grid-gap:20px;
+}
+.tourProgram > div{
+    width: 100%;
+    max-width:220px;
+    min-height:477px;
+    display:grid;
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+    background-color: #222222;
+    border-radius:17px;
+}
+.tourProgram > h2{
+    width:100%;
+    min-width:100%;
+}
+.tourProgram > div > picture > img{
+    border-radius: 17px 17px 0 0;
+    width:100%;
+    max-width:220px;
+}
+.tourProgram > div > h3{
+    font-size:17px;
+    width:100%;
+    max-width:200px;;
+}
+.tourProgram > div > p{
+    font-size: 14px;
+    color:#808080;
+    width: 100%;
+    max-width:200px;
+}
+
+.tourCost{
+     margin-top: 17px;
+    width:100%;
+    max-width:1034px;
+    min-height:915px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    justify-items: center;
+    flex-wrap:wrap;
+    grid-gap:20px;
+}
+.tourCost > h2{
+    width:100%;
+    max-width:100%;
+}
+.tourCost > div{
+    border-radius: 17px;
+    background-color: #222222;
+    width:100%;
+    max-width:310px;
+    min-height:270px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.tourCost > div > strong{
+    color:white;
+}
+.tourCost > div > strong,i{
+ max-width:250px;
+ width:100%;
+}
+
+article > p{
+    margin:3%;
 }

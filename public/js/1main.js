@@ -19,26 +19,31 @@ function include(){
         },0);
     });
 };//include
+
+
 function openMenu(){
     return new Promise((resolve)=>{
+        //That link to Menu O_o
+        const linkToMenush= '<a href="/">Главная</a><a href="Altai-Mountains-Tour">Тур по горному Алтаю</a> <a href="travel-presentation">Презентация</a>';
+        //the End lint to menu!
         function openS(){
-            // const openT =document.querySelector('script');
-            // openT.src="public/js/menuOk.js";
-            // document.querySelector("body").append(openT);
-            // console.log('final fantasu');
             document.querySelector(".menu").addEventListener('click',()=>{
                 let open=document.createElement('div');
                 open.classList.add('openMenush');
-                open.innerHTML=` <a href="/">Главная</a><a href="Altai-Mountains-Tour">Тур по горному Алтаю</a> <a href="travel-presentation">Презентация</a>`;
+                open.innerHTML=`${linkToMenush}`;
                 document.querySelector('main').prepend(open);
+
                 setTimeout(()=>{
+                    let countLink=document.querySelectorAll(".openMenush > a").length;
+                    // console.log(countLink);
                     open.style.height=`100vh`;
                     open.style.transition=`all 1s ease`;
                     open.style.fontSize=`30px`;
-                    document.querySelector('.openMenush > a:nth-child(1)').style.fontSize="30px";
-                    document.querySelector('.openMenush > a:nth-child(2)').style.fontSize="30px";
-                    document.querySelector('.openMenush > a:nth-child(3)').style.fontSize="30px";
-                },170);
+                    for(let i=0;i<countLink;i++){
+                        // console.log(i);
+                        document.querySelectorAll('.openMenush > a')[i].style.fontSize="30px";
+                    }
+                },1);
                 function closeMenu(){
                     document.querySelector('.openMenush').remove();
                 };
@@ -50,7 +55,7 @@ function openMenu(){
                     `;
                     setTimeout(()=>{
                         closeMenu();
-                    },300);
+                    },299);
                 });
             });
             
