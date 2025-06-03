@@ -21,56 +21,26 @@
                 <span>FOLLOW US</span>
                 <strong>Altai Tour</strong>
                 <h1>Откройте для себя дивный мир горного Алтая: уникальное предложение для искателей приключений и красоты</h1>
-                <button>Book New</button>
-                <!-- <form action="/" class="destForm" method="get" class="destForm">
-                    <fieldset>
-                        <legend>Where To?</legend>
-                        <input type="text" name="name" id="name" placeholder="  Plese Name">
-                    </fieldset>
-                     <fieldset>
-                        <legend>When?</legend>
-                        <input type="text" name="date" id="date" placeholder="  mm/dd/yyyy">
-                    </fieldset>
-                     <fieldset>
-                        <legend>How Many?</legend>
-                        <input type="text" name="how" id="how" placeholder="  NO of Tourist ">
-                    </fieldset>
-                    <button type="button" id="sendNow">Sent now</button>
-                </form> -->
+                <!-- <button>Book New</button> -->
+               
                 <form action="/" class="destForm" method="get">
         <fieldset>
             <legend>Where To?</legend>
-            <input type="text" name="name" id="name" placeholder="Please Name">
+            <input type="text" name="name" id="name" placeholder=" Please Name">
         </fieldset>
         <fieldset>
             <legend>When?</legend>
-            <input type="text" name="date" id="date" placeholder="mm/dd/yyyy">
+            <input type="text" name="date" id="date" placeholder=" mm/dd/yyyy">
         </fieldset>
         <fieldset>
             <legend>How Many?</legend>
-            <input type="text" name="how" id="how" placeholder="NO of Tourist">
+            <input type="text" name="how" id="how" placeholder=" NO of Tourist">
         </fieldset>
         <button type="submit" id="sendNow">Send now</button>
     </form>
   
     <script>
-        document.querySelector('.destForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // предотвращаем стандартную отправку формы
-
-            // Получаем значения полей формы
-            const name = document.querySelector('#name').value;
-            const date = document.querySelector('#date').value;
-            const how = document.querySelector('#how').value;
-
-            // Формируем сообщение
-            const message = `Здравствуйте! Меня зовут: ${name}\n  и меня нтересует тур на: ${date}\n : ${how}`;
-
-            // Формируем ссылку для отправки сообщения в WhatsApp
-            const whatsappLink = `https://api.whatsapp.com/send?phone=+79893619813&text=${encodeURIComponent(message)}`;
-
-            // Открываем ссылку в новом окне
-            window.open(whatsappLink, '_blank');
-        });
+        
     </script>
             </div>
         </header>

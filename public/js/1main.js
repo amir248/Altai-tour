@@ -84,15 +84,23 @@ function yearDate(){
 function sendNow(){
     return new Promise((resolve)=>{
         function send(){
-            let name = document.querySelector("#name").value;
-            let date = document.getElementById("date").value;
-            let how = document.querySelector("#how").value;
-            
-            document.querySelector('#sendNow').addEventListener('click',()=>{
-           
-                    return window.location.href='https://wa.me/+79528885656?text=Здравствуйте! Меня зовут' + `${name}` + " Интересно %20 узнать про тур %20in%20 " +`${date}`+"%20car%20for%20sale" +`${how}`;
-                alert(name + " " + date+ " " + " "+ how);
-            });
+            document.querySelector('.destForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // предотвращаем стандартную отправку формы
+
+            // Получаем значения полей формы
+            const name = document.querySelector('#name').value;
+            const date = document.querySelector('#date').value;
+            const how = document.querySelector('#how').value;
+
+            // Формируем сообщение
+            const message = `Здравствуйте! Меня зовут: ${name}\n  и меня нтересует тур на: ${date}\n : ${how}`;
+
+            // Формируем ссылку для отправки сообщения в WhatsApp
+            const whatsappLink = `https://api.whatsapp.com/send?phone=+79893619813&text=${encodeURIComponent(message)}`;
+
+            // Открываем ссылку в новом окне
+            window.open(whatsappLink, '_blank');
+        });
         }
         setTimeout(()=>{
             resolve(send());
@@ -101,7 +109,7 @@ function sendNow(){
 async function main(){
     // await first();
     await include();
-    // await sendNow();
+    await sendNow();
     await openMenu();
     await yearDate();
 }
