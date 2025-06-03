@@ -20,6 +20,9 @@ footer > div{
     flex-wrap:wrap;
     
 }
+footer > div > strong{
+    font-size:33px;
+}
 footer > div > ul > li:nth-child(1){
     list-style-type:none;
     counter-reset: my-counter;
