@@ -23,6 +23,9 @@ function include(){
 
 function openMenu(){
     return new Promise((resolve)=>{
+         setTimeout(()=>{
+            document.querySelector("nav").style.opacity="1";
+        },777);
         //That link to Menu O_o
         const linkToMenush= '<a href="/">Главная</a><a href="Altai-Mountains-Tour">Тур по горному Алтаю</a> <a href="travel-presentation">Презентация</a>';
         //the End lint to menu!
@@ -32,11 +35,12 @@ function openMenu(){
                 open.classList.add('openMenush');
                 open.innerHTML=`${linkToMenush}`;
                 document.querySelector('main').prepend(open);
-
+               
                 setTimeout(()=>{
                     let countLink=document.querySelectorAll(".openMenush > a").length;
                     // console.log(countLink);
                     open.style.height=`100vh`;
+                    open.style.opacity=`1`;
                     open.style.transition=`all 1s ease`;
                     open.style.fontSize=`30px`;
                     for(let i=0;i<countLink;i++){
@@ -52,10 +56,17 @@ function openMenu(){
                         top:100%;
                         height:0;
                         transition:all ease 1s;
+                        opacity:0;
                     `;
                     setTimeout(()=>{
+                        for(let j=0;j<document.querySelectorAll(".openMenush > a").length;j++){
+                        console.log(j);
+                            document.querySelectorAll('.openMenush > a')[j].style.fontSize="0px";
+                        }
+                    },1);
+                    setTimeout(()=>{                     
                         closeMenu();
-                    },299);
+                    },499);
                 });
             });
             
