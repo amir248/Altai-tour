@@ -84,7 +84,10 @@ function yearDate(){
 function sendNow(){
     return new Promise((resolve)=>{
         function send(){
-            document.querySelector('.destForm').addEventListener('submit', function(event) {
+            if(window.location.pathname!="/"){
+                return;
+            }else{
+    document.querySelector('.destForm').addEventListener('submit', function(event) {
             event.preventDefault(); // предотвращаем стандартную отправку формы
 
             // Получаем значения полей формы
@@ -101,10 +104,12 @@ function sendNow(){
             // Открываем ссылку в новом окне
             window.open(whatsappLink, '_blank');
         });
+            }
+        
         }
         setTimeout(()=>{
             resolve(send());
-        },777);
+        },377);
     })};
 async function main(){
     // await first();
