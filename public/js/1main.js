@@ -109,8 +109,8 @@ function sendNow(){
 async function main(){
     // await first();
     await include();
-    await sendNow();
     await openMenu();
+    await sendNow();
     await yearDate();
 }
 main();
