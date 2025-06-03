@@ -79,7 +79,7 @@ function yearDate(){
         }
         setTimeout(()=>{
           resolve(dateYear());
-        },1);
+        },777);
     })};//year
 function sendNow(){
     return new Promise((resolve)=>{
