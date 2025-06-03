@@ -75,7 +75,7 @@ function yearDate(){
         function dateYear(){
             const d = new Date();
             let year=d.getFullYear();
-            document.querySelector('#date').innerHTML=`${year}`;
+            document.querySelector('#dateYear').innerHTML=`${year}`;
         }
         setTimeout(()=>{
           resolve(dateYear());
@@ -87,23 +87,23 @@ function sendNow(){
             if(window.location.pathname!="/"){
                 return;
             }else{
-    document.querySelector('.destForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // предотвращаем стандартную отправку формы
+                document.querySelector('.destForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); // предотвращаем стандартную отправку формы
 
-            // Получаем значения полей формы
-            const name = document.querySelector('#name').value;
-            const date = document.querySelector('#date').value;
-            const how = document.querySelector('#how').value;
+                        // Получаем значения полей формы
+                        const name = document.querySelector('#name').value;
+                        const date = document.querySelector('#date').value;
+                        const how = document.querySelector('#how').value;
 
-            // Формируем сообщение
-            const message = `Здравствуйте! Меня зовут: ${name}\n  и меня нтересует тур на: ${date}\n : ${how}`;
+                        // Формируем сообщение
+                        const message = `Здравствуйте! Меня зовут: ${name}\n  и меня нтересует тур на: ${date}\n : ${how}`;
 
-            // Формируем ссылку для отправки сообщения в WhatsApp
-            const whatsappLink = `https://api.whatsapp.com/send?phone=+79893619813&text=${encodeURIComponent(message)}`;
+                        // Формируем ссылку для отправки сообщения в WhatsApp
+                        const whatsappLink = `https://api.whatsapp.com/send?phone=+79893619813&text=${encodeURIComponent(message)}`;
 
-            // Открываем ссылку в новом окне
-            window.open(whatsappLink, '_blank');
-        });
+                        // Открываем ссылку в новом окне
+                        window.open(whatsappLink, '_blank');
+                    });
             }
         
         }
