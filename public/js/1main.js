@@ -70,9 +70,21 @@ function openMenu(){
         // },777)
     });
 };//openMenu
+function yearDate(){
+    return new Promise((resolve)=>{
+        function dateYear(){
+            const d = new Date();
+            let year=d.getFullYear();
+            document.querySelector('#date').innerHTML=`${year}`;
+        }
+        setTimeout(()=>{
+          resolve(dateYear());
+        },1);
+    })};//year
 async function main(){
     // await first();
     await include();
     await openMenu();
+    await yearDate();
 }
 main();
