@@ -81,9 +81,27 @@ function yearDate(){
           resolve(dateYear());
         },1);
     })};//year
+function sendNow(){
+    return new Promise((resolve)=>{
+        function send(){
+            let name = document.querySelector("#name").value;
+            let date = document.getElementById("date").value;
+            let how = document.querySelector("#how").value;
+            
+            document.querySelector('#sendNow').addEventListener('click',()=>{
+           
+                    return window.location.href='https://wa.me/+79528885656?text=Здравствуйте! Меня зовут' + `${name}` + " Интересно %20 узнать про тур %20in%20 " +`${date}`+"%20car%20for%20sale" +`${how}`;
+                alert(name + " " + date+ " " + " "+ how);
+            });
+        }
+        setTimeout(()=>{
+            resolve(send());
+        });
+    })};
 async function main(){
     // await first();
     await include();
+    // await sendNow();
     await openMenu();
     await yearDate();
 }
