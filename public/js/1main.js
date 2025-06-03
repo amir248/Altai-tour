@@ -104,7 +104,7 @@ function sendNow(){
         }
         setTimeout(()=>{
             resolve(send());
-        });
+        },777);
     })};
 async function main(){
     // await first();
