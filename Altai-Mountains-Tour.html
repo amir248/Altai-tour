@@ -62,6 +62,66 @@
         article > ul > li{
             margin-left:27px;
         }
+         article > ul > li{
+        margin-left:37px;
+    }
+    article > strong > ul > li{
+        margin-left:37px;
+    }
+    article > strong{
+        display:grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    article > strong > video{
+        width:100%;
+        max-width:470px;
+        
+    }
+    .choose{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-wrap:wrap;
+    }
+    .choose > button{
+        width:100%;
+        max-width:170px;
+        border-radius: 17px;
+        height:50px;
+    }
+    .choose > button:nth-child(1){
+        background-color: aquamarine;
+        transition:all ease 1s;
+    }
+    .choose > button:nth-child(1):hover{
+        background-color: rgb(0, 128, 85);
+        color:white;
+    }
+    .choose > button:nth-child(2){
+        background-color:orchid;
+        transition:all ease 1s;
+    }
+    .choose > button:nth-child(2):hover{
+        background-color:rgb(126, 0, 122);
+        color:white;
+    }
+    .choose > button:nth-child(3){
+        background-color: coral;
+        transition:all ease 1s;
+    }
+    .choose > button:nth-child(3):hover{
+        background-color: rgb(143, 66, 38);
+        color:white;
+    }
+    #two,#three{
+        display:none;
+        opacity: 0;
+        transition:all ease 1s;
+    }
     </style>
 </head>
 <body>
@@ -139,7 +199,40 @@
 <h3>Полное описание:</h3>
 <p>Каждый день вашего путешествия будет наполнен новыми открытиями и впечатлениями. От уютных горных деревушек до захватывающих дух пейзажей – Горный Алтай ждет вас! Погружение в культуру и традиции региона, незабываемые приключения и потрясающие виды. Вас ждут экскурсии по историческим местам, сплавы по горным рекам и уютные вечера в комфортабельных отелях.</p>
 
- <?
+ <strong>
+                <ul>
+                    <h3>План тура: </h3>
+                    <li>Змеиногорск три дня первый день прогулка по городу, плов.
+                       Три человека - 9 000 тыс. рублей
+                    </li>
+                    <li>2 день пешая прогулка, баня, день на камнерезный завод,дискотека.</li>
+                    <li>4 день Манжирок ,Майминск район.сплав  по Катуни. 10 000 на двоих "включая завтраки"</li>
+                    <li>6,7 день деревня Чаган-Чемал  дня,размещение  Фараонова дача.
+                        9 000 "завтраки включая на двоих".
+                    </li>
+                </ul>
+                
+                <video controls id="one">
+                    <source src="video/one.mp4" type="video/mp4">
+                    
+                    Your browser does not support the video tag.
+                </video>
+                <video controls id="two">
+                    <source src="video/two.mp4" type="video/mp4">
+                    
+                    Your browser does not support the video tag.
+                </video> 
+                <video controls id="three">
+                    <source src="video/three.mp4" type="video/mp4">
+                    
+                    Your browser does not support the video tag.
+                </video> 
+                <div class="choose">
+                    <button id="btnOne">первое</button>
+                    <button id="btnTwo">второе</button>
+                    <button id="btnThree">тертье</button>
+                </div>
+            </strong>
 
 
         </article>
