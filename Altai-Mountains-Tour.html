@@ -238,6 +238,51 @@
         </article>
         <footer w3-include-html="public/include/footer.html"></footer>
     </main>
+     <script>
+            document.querySelector("#btnOne").addEventListener("click",()=>{
+                document.querySelector("#three").pause();
+                document.querySelector("#two").pause();
+                document.querySelector("#one").style.display="block";
+                document.querySelector("#one").play();
+                document.querySelector("#three").style.opacity="0";
+                document.querySelector("#two").style.opacity="0";
+
+                setTimeout(()=>{
+                    document.querySelector("#one").style.opacity=`1`;
+                     document.querySelector("#three").style.display="none";
+                    document.querySelector("#two").style.display="none";
+                },100)
+            });
+            document.querySelector("#btnTwo").addEventListener("click",()=>{
+                document.querySelector("#three").pause();
+                document.querySelector("#one").pause();
+                document.querySelector("#two").style.display="block";
+                document.querySelector("#two").play();
+                document.querySelector("#one").style.opacity="0";
+                document.querySelector("#three").style.opacity="0";
+            
+
+                setTimeout(()=>{
+                    document.querySelector("#one").style.display=`none`;
+                     document.querySelector("#three").style.display="none";
+                    document.querySelector("#two").style.opacity="1";
+                },100)
+            })
+            document.querySelector("#btnThree").addEventListener("click",()=>{
+                document.querySelector("#one").pause();
+                document.querySelector("#two").pause();
+                document.querySelector("#three").style.display="block";
+                document.querySelector("#three").play();
+                document.querySelector("#one").style.opacity="0";
+                document.querySelector("#two").style.opacity="0";
+
+                setTimeout(()=>{
+                    document.querySelector("#three").style.opacity=`1`;
+                     document.querySelector("#one").style.display="none";
+                    document.querySelector("#two").style.display="none";
+                },100)
+            });
+        </script>
     <script src="public/js/1main.js"></script>
     <script>
         const list={};
