@@ -213,3 +213,8 @@ article > p{
 .startYourAdventure > div > h3{
     font-size:33px;
 }
+
+body > main > article > picture > img{
+    width:100%;
+    max-width:1300px;
+}
