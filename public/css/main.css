@@ -219,7 +219,11 @@ body > main > article > picture > img{
     max-width:900px;
 }
 .photoNumber{
-    display:block;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-wrap:wrap;
 }
 .photoNumber > span{
     font-size:55px;
