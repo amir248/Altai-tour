@@ -27,7 +27,7 @@ function openMenu(){
             document.querySelector("nav").style.opacity="1";
         },777);
         //That link to Menu O_o
-        const linkToMenush= '<a href="/">Главная</a><a href="Altai-Mountains-Tour">Тур по горному Алтаю</a> <a href="travel-presentation">Презентация</a>';
+        const linkToMenush= '<a href="/">Главная</a><a href="Altai-Mountains-Tour">Тур по горному Алтаю</a>';
         //the End lint to menu!
         function openS(){
             document.querySelector(".menu").addEventListener('click',()=>{
